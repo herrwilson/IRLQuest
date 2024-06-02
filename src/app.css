@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@base {
+	html {
+		font-family: 'Inter', sans-serif;
+	}
+}
+
+/* used to dynamically set document height */
+:root {
+	--doc-height: 100%;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100vh; /* fallback for Js load */
+	height: var(--doc-height);
+}
